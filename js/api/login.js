@@ -2,12 +2,12 @@ async function login(event) {
     event.preventDefault();
 
     const credentials = {
-        username: document.getElementById('email').value,
-        password: document.getElementById('password').value
+        username: document.getElementById('loginEmail').value,
+        password: document.getElementById('loginPassword').value
     };
 
     try {
-        const response = await fetch('http://localhost:8080/api/auth/login', {
+        const response = await fetch('http://musicboxd-aiven-env.eba-bbjzqugv.eu-north-1.elasticbeanstalk.com/api/auth/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(credentials)

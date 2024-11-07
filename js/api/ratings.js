@@ -7,7 +7,7 @@ function getYourRatings() {
         return;
     }
   
-    fetch(`http://localhost:8080/api/auth/review/user/${userId}`, {
+    fetch(`http://musicboxd-aiven-env.eba-bbjzqugv.eu-north-1.elasticbeanstalk.com/api/auth/review/user/${userId}`, {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${jwt}`,

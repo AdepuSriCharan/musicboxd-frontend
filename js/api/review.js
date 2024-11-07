@@ -12,7 +12,7 @@ async function submitReview(event) {
 
     
     try {
-        const response = await fetch("http://localhost:8080/api/auth/review/add", {
+        const response = await fetch("http://musicboxd-aiven-env.eba-bbjzqugv.eu-north-1.elasticbeanstalk.com/api/auth/review/add", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

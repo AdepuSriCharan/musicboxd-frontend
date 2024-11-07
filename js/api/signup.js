@@ -14,14 +14,22 @@ function hideLoginOverlay() {
 
 async function signup(event) {
     event.preventDefault();
+    console.log(document.getElementById('signupEmail').value);
+
+    confirmPassword = document.getElementById('confirmPassword').value
     const signUpData = {
         name: document.getElementById('name').value,
-        username: document.getElementById('email').value,
-        password: document.getElementById('password').value
+        username: document.getElementById('signupEmail').value,
+        password: document.getElementById('signupPassword').value
     };
 
+    if (signUpData.password !== confirmPassword) {
+        alert('Passwords do not match. Please re-enter.');
+        return;
+    }
+
     try {
-        const response = await fetch('http://localhost:8080/api/auth/user/signup', {
+        const response = await fetch('http://musicboxd-aiven-env.eba-bbjzqugv.eu-north-1.elasticbeanstalk.com/api/auth/user/signup', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(signUpData)
