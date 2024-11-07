@@ -1,0 +1,84 @@
+
+.review-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(21, 21, 21, 0.8);
+    z-index: 10;         
+}
+
+.review-container {
+    width: 100%;
+    max-width: 435px;
+    background: #1a1a1a;
+    border-radius: 6px;
+    padding: 41px 30px;
+    box-shadow: 0 10px 20px rgba(14, 14, 14, 0.5);
+    text-align: center;
+    color: #e0e0e0;
+    margin-left: 450px;  
+}
+
+.review-container h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #c49bdb;
+}
+
+.review-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; 
+}
+
+.review-container label {
+    font-size: 14px;
+    color: #e1e1e1;
+    text-align: left;
+}
+
+.review-container input,
+.review-container textarea {
+    padding: 12px;
+    border: 1px solid #5c5c5c;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    background-color: #3e3e3e;
+    color: #e1e1e1;
+}
+
+.review-container textarea {
+    height: 120px;
+}
+
+.review-container button {
+    padding: 12px;
+    border: none;
+    background-color: #6f42c1;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.review-container button:hover {
+    background-color: #5a2e97;
+}
+
+.review-container button[type="button"] {
+    background-color: #444444;
+    color: #e1e1e1;
+    margin-top: 10px;
+}
+
+.review-container button[type="button"]:hover {
+    background-color: #333333;
+}

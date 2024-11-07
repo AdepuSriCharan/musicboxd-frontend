@@ -1,0 +1,19 @@
+html, body {
+    height: 100%; 
+    margin: 0;
+    display: block;  
+}
+
+main {
+    padding: 20px;
+    flex-grow: 1; 
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #222222;
+    color: #c49bdb;
+    width: 100%;
+}

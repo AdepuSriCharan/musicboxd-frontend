@@ -1,0 +1,16 @@
+@media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .header-left, .header-right {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    main {
+      padding: 10px;
+    }
+  }
+  
