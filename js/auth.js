@@ -15,14 +15,14 @@ loginOverlay.addEventListener('click', (e) => {
 
 loginButton.addEventListener('click', showLoginOverlay);
 
-function togglePassword() {
-    const passwordInput = document.getElementById('password');
-    const passwordToggleButton = document.querySelector('.show-password');
+function togglePassword(button) {
+    const passwordInput = button.previousElementSibling;
     if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
-        passwordToggleButton.textContent = 'Hide';
+        button.textContent = 'Hide';
     } else {
         passwordInput.type = 'password';
-        passwordToggleButton.textContent = 'Show';
+        button.textContent = 'Show';
     }
 }
+

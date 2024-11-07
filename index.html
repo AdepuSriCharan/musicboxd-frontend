@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/forms.css">
     <link rel="stylesheet" href="css/albums.css">
     <link rel="stylesheet" href="css/review.css">
+    <link rel="stylesheet" href="css/signup.css">
     <link rel="stylesheet" href="css/responsive.css">
     </head>
 <body>
@@ -92,8 +93,8 @@
                 </div>
                 <div class="option">
                     <a href="#">
-                        <img src="logos/apple.png" alt="Apple" />
-                        <span>Apple</span>
+                        <img src="logos/microsoft.png" alt="Microsoft" />
+                        <span>Microsoft</span>
                     </a>
                 </div>
             </div>
@@ -111,13 +112,50 @@
                         <a href="#">Forgot Password?</a>
                     </div>
                     <input type="password" id="password" placeholder="Enter your password" required />
-                    <button type="button" class="show-password" onclick="togglePassword()">Show</button>
+                    <button type="button" class="show-password" onclick="togglePassword(this)">Show</button>
                 </div>
                 <button type="submit">Log In</button>
-                <p class="sign-up">Don't have an account? <a href="#">Sign up</a></p>
+                <p class="sign-up">Don't have an account? <a href="#" onclick="showSignupOverlay()">Sign up</a></p>
             </form>
         </div>
     </section>
+
+    <section class="signup-overlay" id="signupOverlay" style="display: none;">
+        <div class="signup-container">
+            <h3>Create an Account</h3>
+            <form id="signup-form" onsubmit="signup(event)">
+                <div class="input-box">
+                    <div class="label-title">
+                        <label for="name">Name</label>
+                    </div>
+                    <input type="text" id="name" placeholder="Enter your name" required />
+                </div>
+                <div class="input-box">
+                    <div class="label-title">
+                        <label for="email">Email</label>
+                    </div>
+                    <input type="email" id="email" placeholder="Enter email address" required />
+                </div>
+                <div class="input-box">
+                    <div class="password-title">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="password-input-container">
+                        <input type="password" id="password" class="password-input" placeholder="Enter your password" required />
+                        
+                        <div class="password-title">
+                            <label for="confirmPassword">Confirm Password</label>
+                        </div>
+                        <input type="password" id="confirmPassword" class="password-input" placeholder="Confirm your password" required />
+                        <button type="button" class="show-password" onclick="togglePassword()">Show</button>
+                    </div>
+                </div>
+                <button type="submit">Sign Up</button>
+                <p class="sign-in">Already have an account? <a href="#" onclick="showLoginOverlay()">Login</a></p>
+            </form>
+        </div>
+    </section>
+
 
     <footer>
         <p>© 2024 MusicBoxd. All Rights Reserved.</p>
@@ -129,6 +167,7 @@
     <script src="js/api/login.js"></script>
     <script src="js/api/ratings.js"></script>
     <script src="js/api/review.js"></script>
+    <script src="js/api/signup.js"></script>
     <script src="js/api/showAlbum.js"></script>
 </body>
 </html>
